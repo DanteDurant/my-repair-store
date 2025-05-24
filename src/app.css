@@ -1,81 +1,9 @@
-/* ─────────────  Base reset & layout  ───────────── */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+body{
+	--bs-body-font-family: "Inter", system-ui, sans-serif;
+	--bs-body-color: #111;
+	--bs-body-bg: #fff;
 }
-
-body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, Helvetica, Arial, sans-serif;
-  background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
-  color: #f3f4f6;
-  min-height: 100vh;
-
-  /* Center everything with flexbox */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  text-align: center;
-  padding: 2rem;
-}
-
-/* ─────────────  Headings  ───────────── */
-h1 {
-  font-size: clamp(2.5rem, 5vw, 4rem);
-  letter-spacing: 0.04em;
-  margin-bottom: 1rem;
-  line-height: 1.15;
-  background: linear-gradient(90deg, #a855f7, #f97316, #60a5fa);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-/* ─────────────  Links  ───────────── */
-a {
-  color: #38bdf8;
-  font-weight: 600;
-  text-decoration: none;
-  position: relative;
-}
-
-a::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -2px;
-  width: 0%;
-  height: 2px;
-  background: currentColor;
-  transition: width 0.25s ease;
-}
-
-a:hover::after,
-a:focus-visible::after {
-  width: 100%;
-}
-
-a:focus-visible {
-  outline: 2px solid currentColor;
-  outline-offset: 4px;
-}
-
-/* ─────────────  Paragraphs  ───────────── */
-p {
-  font-size: 1.125rem;
-  line-height: 1.6;
-  max-width: 32rem;
-}
-
-/* ─────────────  Small screens tweak  ───────────── */
-@media (max-width: 480px) {
-  body {
-    padding: 1.5rem;
-  }
-  p {
-    font-size: 1rem;
-  }
-}
+.btn-dark{ --bs-btn-bg:#000; --bs-btn-border-color:#000; }
+.btn-dark:hover{ --bs-btn-bg:#1a1a1a; }
