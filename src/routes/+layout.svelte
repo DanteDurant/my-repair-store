@@ -9,7 +9,6 @@
     /* ──────────────────────────────────────────────
      1 – Theme store (browser-safe)
   ─────────────────────────────────────────────── */
-    export const theme = writable<"dark" | "light">("dark");
 
     if (browser) {
         // initial value from localStorage
@@ -28,6 +27,11 @@
         console.log("Toggle theme");
         theme.update((t) => (t === "dark" ? "light" : "dark"));
     }
+
+    import { setContext } from "svelte";
+
+    const theme = writable<"light" | "dark">("dark");
+    setContext("theme", theme);
 
     /* ──────────────────────────────────────────────
      2 – Navbar links
@@ -64,7 +68,7 @@
                     height="100"
                 />
 
-                <h1 >Dante’s Infernal Repairs</h1>
+                <h1>Dante’s Infernal Repairs</h1>
             </a>
 
             <button
@@ -165,8 +169,6 @@
         height: auto;
         object-fit: contain;
     }
-
-
 
     .theme-toggle {
         width: 44px;

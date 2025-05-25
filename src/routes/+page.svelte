@@ -1,12 +1,17 @@
 <script lang="ts">
+    import { getContext } from "svelte";
+    import type { Writable } from "svelte/store";
+
+    const theme = getContext<Writable<"light" | "dark">>("theme");
+
     /* ----------  DATA  ---------- */
     // image paths live in /static/images so we reference them directly
-    const hero = "/images/infernal-bg.jpg";
+    const hell = "/images/infernal-bg.jpg";
+    const heaven = "/images/heaven.jpg";
     const broken = "/images/broken.jpg";
     const fixed = "/images/fixed.jpg";
     const hall = "/images/hall.jpg";
     const potent = "/images/potent.jpg";
-
 
     // WhatsApp CTA config
     const phone = "27616475781"; // replace with your real number in intl format
@@ -79,9 +84,11 @@
     <img
         class="w-100 rounded-3 object-fit-cover hero-img"
         height="420"
-        src={hero}
+        src={$theme === "light" ? heaven : hell}
         alt="Infernal background"
     />
+
+
 
     <div
         class="position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center text-center text-white rounded-3 hero-overlay"
@@ -116,7 +123,7 @@
 
 <!-- WHY CHOOSE US (unchanged) -->
 <section class="container my-5">
-    <h2 class="fw-bold mb-4">Why Dante’s Infernal Repairs?</h2>
+    <h2 class="fw-bold mb-4">Why repair your controller with us?</h2>
     <ul class="list-unstyled fs-5 lh-lg">
         <li>
             ⚡ <strong>Same‑day turnaround</strong> – drop your controller, grab
