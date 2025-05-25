@@ -14,12 +14,12 @@
 		{
 			icon: '🎮',
 			title: 'Complete Joystick Module',
-			body: 'Broken or smashed stick? We fit a brand-new OEM module and recalibrate.\n± 1 h • from R 450'
+			body: 'Broken or smashed stick? We fit a brand-new joy-stick module and recalibrate.\n± 1 h • from R 400'
 		},
 		{
 			icon: '🎯',
 			title: 'Joy-Con Drift Repair',
-			body: 'Selective Switch work – contact us for pricing and availability.'
+			body: 'Nintendo Switch Joy-Cons drift fix – contact us for pricing and availability.'
 		}
 	];
 
@@ -57,17 +57,33 @@
 		}
 	];
 
+    import hero from '$lib/images/infernal-bg.jpg';
+
 </script>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- HERO -->
-<section class="position-relative container my-5">
+<section class="position-relative container px-0 my-5">
 	<img class="w-100 rounded-3 object-fit-cover hero-img" height="420"
-	     src="https://placehold.co/1200x800/png?text=Controller+Repair"
-	     alt="Close-up of a game controller" />
+	     src="{hero}"
+	     alt="hell scape" />
 
 	<div class="position-absolute top-0 start-0 w-100 h-100
 	            d-flex flex-column justify-content-center align-items-center
-	            text-center text-white rounded-3 hero-overlay px-3">
+	            text-center text-white rounded-3 hero-overlay">
 		<h1 class="display-4 fw-bold mb-3">Say Goodbye to Stick Drift</h1>
 		<p class="lead mb-4">
 			Hall-effect upgrades and rapid repairs for PlayStation, Xbox and Switch
@@ -77,13 +93,28 @@
 	</div>
 </section>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- SERVICES -->
 <section id="services" class="container my-5">
 	<h2 class="fw-bold mb-4">Our Services</h2>
 	<div class="row g-4">
 		{#each services as s}
 			<div class="col-md-3 col-sm-6">
-				<article class="p-4 bg-light rounded-3 h-100 service-card">
+				<article class="p-4 bg-light rounded-3 h-100 service-card"
+				         style="background:var(--color-bg-soft)">
 					<div class="fs-2 mb-2">{s.icon}</div>
 					<h3 class="h6 fw-semibold mb-2">{s.title}</h3>
 					<p class="mb-0 white-space-pre-line">{s.body}</p>
@@ -93,16 +124,39 @@
 	</div>
 </section>
 
+
+
+
+
+
+
+
+
+
+
+
 <!-- WHY CHOOSE US -->
 <section class="container my-5">
 	<h2 class="fw-bold mb-4">Why Dante’s Infernal Repairs?</h2>
 	<ul class="list-unstyled fs-5 lh-lg">
 		<li>⚡ <strong>Same-day turnaround</strong> – drop your controller, grab coffee, pick it up fixed.</li>
 		<li>🛡️ <strong>6-month workmanship warranty</strong> on every repair.</li>
-		<li>💬 <strong>Plain-language advice</strong> – no tech jargon, just honest options &amp; prices.</li>
+		<!-- <li>💬 <strong>Plain-language advice</strong> – no tech jargon, just honest options &amp; prices.</li> -->
 		<li>🇿🇦 <strong>Local &amp; independent</strong> – supporting SA gamers since 2022.</li>
 	</ul>
 </section>
+
+
+
+
+
+
+
+
+
+
+
+
 
 <!-- GALLERY -->
 <section id="gallery" class="container my-5">
@@ -116,6 +170,18 @@
 		{/each}
 	</div>
 </section>
+
+
+
+
+
+
+
+
+
+
+
+
 
 <!-- TESTIMONIALS -->
 <section id="testimonials" class="container my-5">
@@ -143,6 +209,17 @@
 	{/each}
 </section>
 
+
+
+
+
+
+
+
+
+
+
+
 <!-- CONTACT -->
 <section id="contact" class="container my-5">
 	<h2 class="fw-bold mb-4">Book Your Repair</h2>
@@ -164,6 +241,19 @@
 		</div>
 	</form>
 </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <style>
 	/* hero & gallery effects */

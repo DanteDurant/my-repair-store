@@ -1,9 +1,84 @@
+/* --------------------------------------------------
+   1 – Bootstrap core
+-------------------------------------------------- */
 @import "bootstrap/dist/css/bootstrap.min.css";
 
-body{
-	--bs-body-font-family: "Inter", system-ui, sans-serif;
-	--bs-body-color: #111;
-	--bs-body-bg: #fff;
+/* --------------------------------------------------
+   2 – CSS variables for theming
+-------------------------------------------------- */
+
+/* DARK THEME – default */
+:root{
+	/* Text & backgrounds */
+	--color-bg:        #0f0f0f;
+	--color-bg-soft:   #1c1c1c;
+	--color-text:      #f1f1f1;
+	--color-text-muted:#9ca3af;
+
+	/* Brand accent */
+	--color-accent:    #e11d48;
 }
-.btn-dark{ --bs-btn-bg:#000; --bs-btn-border-color:#000; }
-.btn-dark:hover{ --bs-btn-bg:#1a1a1a; }
+
+/* LIGHT THEME overrides */
+[data-theme='light']{
+	--color-bg:        #ffffff;
+	--color-bg-soft:   #f8fafc;
+	--color-text:      #111111;
+	--color-text-muted:#6b7280;
+	--color-accent:    #2563eb;
+}
+
+/* --------------------------------------------------
+   3 – Apply variables to body & common classes
+-------------------------------------------------- */
+body{
+	font-family: "Inter", system-ui, sans-serif;
+	background: var(--color-bg);
+	color: var(--color-text);
+}
+
+@font-face {
+  font-family: 'Perpetua';
+  src: url('$lib/fonts/Perpetua-bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+/* Bootstrap helpers that need dark-mode tweaks */
+.bg-light{ background: var(--color-bg-soft) !important; }
+.text-muted{ color: var(--color-text-muted) !important; }
+
+.btn-dark{
+	--bs-btn-bg:            var(--color-accent);
+	--bs-btn-border-color:  var(--color-accent);
+	--bs-btn-hover-bg:      color-mix(in srgb, var(--color-accent) 85%, #000);
+	--bs-btn-hover-border-color: var(--color-accent);
+}
+
+/* Your custom effects */
+.hero-img    { filter:grayscale(100%); }
+.gallery-img { filter:grayscale(100%); transition:.25s; }
+.gallery-img:hover{ filter:none; transform:scale(1.04); }
+
+.hero-overlay{ background:rgba(0,0,0,.55); }
+
+.service-card{ transition:.15s; }
+.service-card:hover{
+	transform:translateY(-4px);
+	box-shadow:0 .5rem 1rem rgba(0,0,0,.05);
+}
+
+.white-space-pre-line{ white-space:pre-line }
+
+/* sync Bootstrap-navbar colours with our custom palette */
+.navbar{
+	/* brand text */
+	--bs-navbar-brand-color:        var(--color-text);
+	--bs-navbar-brand-hover-color:  var(--color-accent);
+
+	/* regular links */
+	--bs-navbar-color:              var(--color-text);
+	--bs-navbar-hover-color:        var(--color-accent);
+}
