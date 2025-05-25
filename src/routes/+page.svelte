@@ -166,11 +166,11 @@
                 required
             ></textarea>
         </div>
-        <div class="col-12 d-flex gap-3 flex-column flex-sm-row">
+        <div class="col-12 d-flex gap-3 justify-content-around ">
             <button class="btn btn-dark px-4" type="submit">Send</button>
             <!-- WhatsApp CTA -->
             <a
-                class="btn btn-whatsapp d-flex align-items-center gap-2 px-4"
+                class="btn btn-whatsapp d-flex align-items-center  gap-2 px-4"
                 href={waLink}
                 target="_blank"
                 rel="noopener"
