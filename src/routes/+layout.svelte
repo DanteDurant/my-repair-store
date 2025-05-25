@@ -104,7 +104,7 @@
                     rel="noopener"
                     aria-label="Chat on WhatsApp"
                 >
-                    <div class="d-flex align-items-center gap-2">
+                    <div >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="24"
