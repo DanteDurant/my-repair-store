@@ -1,41 +1,35 @@
 <script lang="ts">
     import "../app.css";
-    import { onMount } from "svelte";
-    import { browser } from "$app/environment";
     import logo from "/images/file.svg?raw";
-    import sun from "/images/greek-sun.png";
-    import moon from "/images/moon.png";
-
-    /* ──────────────────────────────────────────────
-	   1 – Bootstrap Collapse (client-only)
-	────────────────────────────────────────────── */
-    // onMount(() => {
-    //     if (browser) import("bootstrap/js/dist/collapse");
-    // });
-
-    /* ──────────────────────────────────────────────
-	   2 – Theme toggle logic
-	────────────────────────────────────────────── */
+    import { browser } from "$app/environment";
     import { writable } from "svelte/store";
 
-    const stored = browser ? localStorage.getItem("theme") : null;
-    export const theme = writable(stored ?? "dark");
+    /* ──────────────────────────────────────────────
+     1 – Theme store (browser-safe)
+  ─────────────────────────────────────────────── */
+    export const theme = writable<"dark" | "light">("dark");
 
-    // keep <html data-theme="…"> in sync
-    theme.subscribe((v) => {
-        if (browser) {
+    if (browser) {
+        // initial value from localStorage
+        const saved = localStorage.getItem("theme") ?? "dark";
+        document.documentElement.dataset.theme = saved;
+        theme.set(saved);
+
+        // keep <html data-theme="…"> & localStorage in sync
+        theme.subscribe((v) => {
             document.documentElement.dataset.theme = v;
             localStorage.setItem("theme", v);
-        }
-    });
+        });
+    }
 
     function toggleTheme() {
+        console.log("Toggle theme");
         theme.update((t) => (t === "dark" ? "light" : "dark"));
     }
 
     /* ──────────────────────────────────────────────
-	   3 – Navbar links
-	────────────────────────────────────────────── */
+     2 – Navbar links
+  ─────────────────────────────────────────────── */
     const links = [
         { href: "#services", label: "Services" },
         { href: "#gallery", label: "Gallery" },
@@ -52,29 +46,35 @@
     <div class="container">
         <!-- left side: brand + toggle sit in a row -->
 
-<a class="navbar-brand d-flex align-items-center gap-2"
-   href="/" style="color:var(--color-text)">
-  <!-- inline SVG -->
-  <svg class="brand-logo" width="72" height="72"
-       viewBox="0 0 24 24" fill="currentColor">
-    {@html logo}<!-- ensure each <path> has no hard-coded fill -->
-  </svg>
+        <a
+            class="navbar-brand d-flex align-items-center gap-2"
+            href="/"
+            style="color:var(--color-text)"
+        >
+            <!-- inline SVG -->
+            <svg
+                class="brand-logo"
+                width="72"
+                height="72"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+            >
+                {@html logo}
+            </svg>
 
-  <h1 class="heading-main">
-      Dante’  s Infernal Repairs
-
-  </h1>
-</a>
+            <h1 class="heading-main">Dante’s Infernal Repairs</h1>
+        </a>
 
         <button
-            class="theme-toggle ms-5 ps-5 {$theme === 'light' ? 'light' : ''}"
+            class="theme-toggle ms-5 ps-5"
+            class:light={$theme === "light"}
             on:click={toggleTheme}
             aria-label="Toggle colour theme"
         >
             <!-- Sun image -->
             <img
                 class="icon sun"
-                src={sun}
+                src="/images/greek-sun.png"
                 alt="Light-mode icon"
                 width="48"
                 height="48"
@@ -83,7 +83,7 @@
             <!-- Moon image -->
             <img
                 class="icon moon"
-                src={moon}
+                src="/images/moon.png"
                 alt="Dark-mode icon"
                 width="48"
                 height="48"
@@ -137,9 +137,7 @@
 
     .heading-main {
         letter-spacing: -2px;
-        font-family: 'Perpetua', serif;
-
-
+        font-family: "Perpetua", serif;
     }
 
     .theme-toggle {
@@ -187,6 +185,4 @@
             var(--color-accent) 30%
         );
     }
-
-
 </style>
