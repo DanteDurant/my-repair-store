@@ -128,7 +128,7 @@
     <img
         class="w-100 rounded-3 object-fit-cover hero-img"
         height="420"
-        src={$theme === "light" ? heaven : hero}
+        src={$theme === "light" ? hero : heaven}
         alt="Infernal background"
     />
 
