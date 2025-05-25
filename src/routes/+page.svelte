@@ -1,5 +1,11 @@
 <script lang="ts">
 	/* ----------  DATA  ---------- */
+    import hero from '/images/infernal-bg.jpg';
+    import broken from '/images/broken.jpg';
+    import fixed from '/images/fixed.jpg';
+    import hall from '/images/hall.jpg';
+    import potent from '/images/potent.jpg';
+
 	const services = [
 		{
 			icon: '🧲',
@@ -24,10 +30,10 @@
 	];
 
 	const gallery = [
-		'https://placehold.co/600x600/png?text=Before',
-		'https://placehold.co/600x600/png?text=After',
-		'https://placehold.co/600x600/png?text=Hall+Effect',
-		'https://placehold.co/600x600/png?text=Potentiometer'
+		broken,
+        fixed,
+        hall,
+        potent,
 	];
 
 	const testimonials = [
@@ -57,7 +63,7 @@
 		}
 	];
 
-    import hero from '/images/infernal-bg.jpg';
+    
 
 </script>
 
@@ -183,7 +189,7 @@
 
 
 
-<!-- TESTIMONIALS -->
+<!-- TESTIMONIALS
 <section id="testimonials" class="container my-5">
 	<h2 class="fw-bold mb-4">Testimonials</h2>
 	{#each testimonials as t}
@@ -207,7 +213,7 @@
 			</div>
 		</article>
 	{/each}
-</section>
+</section> -->
 
 
 
@@ -257,8 +263,8 @@
 
 <style>
 	/* hero & gallery effects */
-	.hero-img    { filter:grayscale(100%); }
-	.gallery-img { filter:grayscale(100%); transition:.25s; }
+	.hero-img    { filter:grayscale(50%); }
+	.gallery-img { filter:grayscale(25%); transition:.25s; }
 	.gallery-img:hover{ filter:none; transform:scale(1.04); }
 
 	.hero-overlay{ background:rgba(0,0,0,.55); }
