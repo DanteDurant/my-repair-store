@@ -43,21 +43,20 @@
     class="navbar navbar-expand-lg border-bottom sticky-top"
     style="background:var(--color-bg-soft)"
 >
-    <div class="container">
+    <div class="container  ">
         <!-- left side: brand + toggle sit in a row -->
 
         <a
-            class="navbar-brand d-flex align-items-center gap-2"
+            class="navbar-brand d-flex align-items-center gap-2  m-0 p-0"
             href="/"
-            style="color:var(--color-text)"
+            style="color:var(--color-accent)"
         >
             <!-- inline SVG -->
             <svg
-                class="brand-logo"
-                width="72"
-                height="72"
-                viewBox="0 0 24 24"
-                fill="currentColor"
+                class=" logo" 
+
+
+
             >
                 {@html logo}
             </svg>
@@ -133,6 +132,14 @@
     }
     .nav-link:hover::after {
         width: 100%;
+    }
+
+    .logo {
+        margin-top: -10px;
+        margin-bottom: -10px;
+        width: 100px;
+        height: 100px;
+        fill: red !important;
     }
 
     .heading-main {
