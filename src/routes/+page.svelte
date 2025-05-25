@@ -96,7 +96,7 @@
 
 <!-- WHY CHOOSE US (unchanged) -->
 <section class="container my-5">
-    <h2 class="fw-bold mb-4">Why Dante’s Infernal Repairs?</h2>
+    <h2 class="fw-bold mb-4">Why repair your controller with us?</h2>
     <ul class="list-unstyled fs-5 lh-lg">
         <li>
             ⚡ <strong>Same‑day turnaround</strong> – drop your controller, grab
