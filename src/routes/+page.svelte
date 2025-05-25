@@ -57,7 +57,7 @@
 		}
 	];
 
-    import hero from '$lib/images/infernal-bg.jpg';
+    import hero from '/images/infernal-bg.jpg';
 
 </script>
 

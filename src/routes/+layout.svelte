@@ -2,9 +2,9 @@
     import "../app.css";
     import { onMount } from "svelte";
     import { browser } from "$app/environment";
-    import logo from "$lib/images/file.svg?raw";
-    import sun from "$lib/images/greek-sun.png";
-    import moon from "$lib/images/moon.png";
+    import logo from "/images/file.svg?raw";
+    import sun from "/images/greek-sun.png";
+    import moon from "/images/moon.png";
 
     /* ──────────────────────────────────────────────
 	   1 – Bootstrap Collapse (client-only)
