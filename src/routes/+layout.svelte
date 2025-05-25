@@ -152,7 +152,7 @@
         class="container d-flex flex-wrap justify-content-between align-items-center gap-3"
     >
         <span class="small mb-0" style="color:var(--color-text-muted)">
-            © {new Date().getFullYear()} Dante’s Infernal Repairs • Johannesburg,
+            © {new Date().getFullYear()} Dante’s Infernal Repairs • Cape Town - Capri,
             SA
         </span>
     </div>
