@@ -6,6 +6,10 @@
     const logowhite = "/images/logo-white.png";
     const logoblack = "/images/logo-black.png";
 
+    const hero = "/images/infernal-bg.jpg";
+    const heaven = "/images/heaven.jpg";
+
+
     /* ──────────────────────────────────────────────
      1 – Theme store (browser-safe)
   ─────────────────────────────────────────────── */
@@ -118,6 +122,27 @@
         </div>
     </div>
 </nav>
+
+<!-- HERO -->
+<section class="position-relative container px-0 my-5">
+    <img
+        class="w-100 rounded-3 object-fit-cover hero-img"
+        height="420"
+        src={$theme === "light" ? heaven : hero}
+        alt="Infernal background"
+    />
+
+    <div
+        class="position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center text-center text-white rounded-3 hero-overlay"
+    >
+        <h1 class="display-4 fw-bold mb-3">Say Goodbye to Stick Drift</h1>
+        <p class="lead mb-4">
+            Hall‑effect upgrades and rapid repairs for PlayStation, Xbox and
+            Switch controllers – expertly fitted while you shop.
+        </p>
+        <a class="btn btn-dark" href="#contact">Book a Slot</a>
+    </div>
+</section>
 
 <main><slot /></main>
 
