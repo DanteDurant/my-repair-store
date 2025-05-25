@@ -7,6 +7,7 @@
     const hall = "/images/hall.jpg";
     const potent = "/images/potent.jpg";
 
+
     // WhatsApp CTA config
     const phone = "27616475781"; // replace with your real number in intl format
     const message = "Hi Dante, I’d like to book a repair";

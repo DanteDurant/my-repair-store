@@ -31,19 +31,24 @@
 /* --------------------------------------------------
    3 – Apply variables to body & common classes
 -------------------------------------------------- */
+
+
+@font-face {
+	font-family: 'BlackChancery';
+	src: url('/fonts/blackchancery.regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+h1, h2 {
+	font-family: "BlackChancery", serif;
+}
+
 body{
 	font-family: "Inter", system-ui, sans-serif;
 	background: var(--color-bg);
 	color: var(--color-text);
 }
-
-@font-face {
-  font-family: 'Perpetua';
-  src: url('/fonts/Perpetua-bold.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
 
 
 /* Bootstrap helpers that need dark-mode tweaks */

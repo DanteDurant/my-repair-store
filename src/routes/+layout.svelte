@@ -3,6 +3,8 @@
     import logo from "/images/file.svg?raw";
     import { browser } from "$app/environment";
     import { writable } from "svelte/store";
+    const logowhite = "/images/logo-white.png";
+    const logoblack = "/images/logo-black.png";
 
     /* ──────────────────────────────────────────────
      1 – Theme store (browser-safe)
@@ -45,18 +47,24 @@
     <div class="container">
         <!-- left side: brand + toggle sit in a row -->
 
-        <div class="collapse navbar-collapse d-flex justify-content-between align-items-center wrap row ">
+        <div
+            class="collapse navbar-collapse d-flex justify-content-between align-items-center wrap row"
+        >
             <a
                 class="navbar-brand d-flex align-items-center gap-2 m-0 p-0 col"
                 href="/"
-                style="color:var(--color-accent)"
+                style="color:var(--color-text)"
             >
                 <!-- inline SVG -->
-                <svg class=" logo">
-                    {@html logo}
-                </svg>
+                <img
+                    src={$theme === "light" ? logoblack : logowhite}
+                    alt="Dante’s Infernal Repairs logo"
+                    class="brand-logo"
+                    width="100"
+                    height="100"
+                />
 
-                <h1 class="heading-main">Dante’s Infernal Repairs</h1>
+                <h1 >Dante’s Infernal Repairs</h1>
             </a>
 
             <button
@@ -107,7 +115,6 @@
             </a>
 
             <a class="btn btn-dark ms-lg-3 col" href="#contact">Book Now</a>
-
         </div>
     </div>
 </nav>
@@ -152,10 +159,14 @@
         fill: red !important;
     }
 
-    .heading-main {
-        letter-spacing: -2px;
-        font-family: "Perpetua", serif;
+    .brand-logo {
+        display: block;
+        width: 100px;
+        height: auto;
+        object-fit: contain;
     }
+
+
 
     .theme-toggle {
         width: 44px;
