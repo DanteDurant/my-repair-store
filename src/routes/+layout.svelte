@@ -3,8 +3,8 @@
     import { onMount } from "svelte";
     import { browser } from "$app/environment";
     import logo from "$lib/images/file.svg?raw";
-    import sun from "$lib/images/greek-sun.png?url";
-    import moon from "$lib/images/moon.png?url";
+    import sun from "$lib/images/greek-sun.png";
+    import moon from "$lib/images/moon.png";
 
     /* ──────────────────────────────────────────────
 	   1 – Bootstrap Collapse (client-only)
@@ -188,13 +188,5 @@
         );
     }
 
-    /* default DARK theme → make the logo light */
-    .logo {
-        color: red;
-    }
 
-    /* LIGHT theme overrides */
-    [data-theme="light"] .logo {
-        filter: none;
-    }
 </style>

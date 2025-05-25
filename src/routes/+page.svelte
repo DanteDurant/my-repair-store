@@ -165,7 +165,7 @@
 		{#each gallery as src}
 			<div class="col-6 col-md-3">
 				<img class="w-100 rounded-2 object-fit-cover ratio ratio-1x1 gallery-img"
-				     src={src} alt="Placeholder image" />
+				     src={src} alt="something interesting to look at" />
 			</div>
 		{/each}
 	</div>
