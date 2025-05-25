@@ -39,7 +39,7 @@ body{
 
 @font-face {
   font-family: 'Perpetua';
-  src: url('$lib/fonts/Perpetua-bold.ttf') format('truetype');
+  src: url('/fonts/Perpetua-bold.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
