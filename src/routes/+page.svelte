@@ -21,7 +21,7 @@
         {
             icon: "🔧",
             title: "Standard Potentiometer Swap",
-            body: "Budget-friendly fix for casual gamers.\nOne stick • ± 1 h • R 300  \nBoth sticks • R 400",
+            body: "Budget-friendly fix for casual gamers.\nOne stick • ± 1 h • R 300  \nBoth sticks • ± 1.5h • R 400",
         },
         {
             icon: "🎮",
