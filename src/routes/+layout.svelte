@@ -157,7 +157,7 @@
     >
         <span class="small mb-0" style="color:var(--color-text-muted)">
             © {new Date().getFullYear()} Dante’s Infernal Repairs • Cape Town -
-            Capri, SA
+            Durbanville, SA
         </span>
     </div>
 </footer>
