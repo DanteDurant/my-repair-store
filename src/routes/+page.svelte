@@ -16,17 +16,17 @@
         {
             icon: "🧲",
             title: "Hall-Effect Thumbstick Upgrade",
-            body: "Premium magnetic sensors that never wear out or drift.\nBoth sticks • ± 2 h • R 400-500",
+            body: "Premium magnetic sensors that never wear out or drift.\nBoth sticks • ± 2 h • R 500-600",
         },
         {
             icon: "🔧",
             title: "Standard Potentiometer Swap",
-            body: "Budget-friendly fix for casual gamers.\nLeft stick • ± 1 h • R 200  |  Both • R 300",
+            body: "Budget-friendly fix for casual gamers.\nLeft stick • ± 1 h • R 300  |  Both • R 400",
         },
         {
             icon: "🎮",
             title: "Complete Joystick Module",
-            body: "Broken or smashed stick? We fit a brand-new joy-stick module and recalibrate.\n± 1 h • from R 300",
+            body: "Broken or smashed stick? We fit a brand-new joy-stick module and recalibrate.\n± 1 h • from R 400",
         },
         {
             icon: "🎯",
