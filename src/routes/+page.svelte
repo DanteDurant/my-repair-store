@@ -15,7 +15,7 @@
     export const services = [
         {
             icon: "🧲",
-            title: "Hall-Effect Joysticks Upgrade",
+            title: "Hall-Effect Joystick Upgrade",
             body: "Premium magnetic sensors that never wear out or drift.\nBoth sticks • ± 2 h • R 500-600",
         },
         {
