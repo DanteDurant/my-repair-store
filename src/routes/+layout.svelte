@@ -67,7 +67,7 @@
                     height="100"
                 />
 
-                <h1 class="main-heading">Dante’s Infernal Repairs</h1>
+                <h1 class="main-heading">Level Up Controllers</h1>
             </a>
 
             <div
