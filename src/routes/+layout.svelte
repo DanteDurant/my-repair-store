@@ -67,7 +67,7 @@
                     height="100"
                 />
 
-                <h1 class="main-heading">Level Up Controllers</h1>
+                <h1 class="main-heading">LevelUp Controllers</h1>
             </a>
 
             <div
@@ -156,7 +156,7 @@
         class="container d-flex flex-wrap justify-content-between align-items-center gap-3"
     >
         <span class="small mb-0" style="color:var(--color-text-muted)">
-            © {new Date().getFullYear()} Level Up Controllers • Cape Town -
+            © {new Date().getFullYear()} LevelUp Controllers • Cape Town -
             Durbanville, SA
         </span>
     </div>
