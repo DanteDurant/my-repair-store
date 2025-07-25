@@ -143,7 +143,7 @@
         class="row gy-3 mb-4"
         on:submit|preventDefault={() => alert("Thanks! We’ll confirm shortly.")}
     >
-        <div class="col-12">
+        <!-- <div class="col-12">
             <input
                 class="form-control"
                 placeholder="Name &amp; Surname"
@@ -165,9 +165,9 @@
                 placeholder="Controller model &amp; issue"
                 required
             ></textarea>
-        </div>
+        </div> -->
         <div class="col-12 d-flex gap-3 justify-content-around ">
-            <button class="btn btn-dark px-4" type="submit">Send</button>
+            <!-- <button class="btn btn-dark px-4" type="submit">Send</button> -->
             <!-- WhatsApp CTA -->
             <a
                 class="btn btn-whatsapp d-flex align-items-center  gap-2 px-4"

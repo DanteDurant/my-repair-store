@@ -121,7 +121,7 @@
                     </div>
                 </a>
 
-                <a class="btn btn-dark ms-lg-3 col" href="#contact">Book Now</a>
+                <a class="btn btn-dark ms-lg-3 col" href="#contact">Contact us</a>
             </div>
         </div>
     </div>
@@ -144,7 +144,7 @@
             Hall‑effect upgrades and rapid repairs for PlayStation, Xbox and
             Switch controllers – expertly fitted while you shop.
         </p>
-        <a class="btn btn-dark" href="#contact">Book a Slot</a>
+        <!-- <a class="btn btn-dark" href="#contact">Book a Slot</a> -->
     </div>
 </section>
 
