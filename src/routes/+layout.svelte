@@ -157,7 +157,7 @@
     >
         <span class="small mb-0" style="color:var(--color-text-muted)">
             © {new Date().getFullYear()} LevelUp Controllers • Cape Town -
-            Durbanville, SA
+            Strand, Helderberg,  SA
         </span>
     </div>
 </footer>
